@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+    <!-- Tab Icon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    
+    <!-- Title -->
+    <title>Frontend Mentor | Interactive card details form</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Css -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css"> 
+</head>
+<body>
+    <main>
+        <div id="cards-container">
+            <div id="card-front">
+                <img class="card-logo" style="max-width: 84px; max-height: 47;" src="./assets/images/card-logo.svg" alt="White circle with a smaller background transperent circle at the right of the white circle" />
+                <div class="card-data ">
+                    <span class="card-number">0000 0000 0000 0000</span>
+                    <div class="name-and-date">
+                        <span class="name">Jane Appleseed</span>
+                        <span class="date">
+                            <span class="date-month">00</span>/<span class="date-year">00</span>
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+            <div id="card-back">
+                <div class="cvc card-data">000</div>
+            </div>
+        </div>
+        <div id="form-container">
+            <form method="get">
+                <ul>
+                    <li>
+                        <label class="card-name-label" for="card-name">CARDHOLDER NAME</label> <br/>
+                        <input type="text" id="card-name" name="card-name" placeholder="e.g. Jane Appleseed">
+                        <span class="errormsg blank">Can't be blank</span>
+                    </li>
+                    <li>
+                        <label for="card-number">CARD NUMBER</label> <br/>
+                        <input title="Digite apenas números" type="text" id="card-number" name="card-number" placeholder="e.g. 1234 5678 9123 0000">
+                        <span class="errormsg blank">Can't be blank</span>
+                        <span class="errormsg pattern">Wrong format, numbers only</span>
+                    </li>
+                    <li class="expDate-and-cvc">
+                        <div class="card-date-container">
+                            <label for="card-date-month">EXP. DATE (MM/YY)</label> <br/>
+                            <input type="text" id="card-date-month" name="card-date-month" placeholder="MM">
+                            <input type="text" id="card-date-year" name="card-date-year" placeholder="YY"><br/>
+                            <span class="errormsg blank">Can't be blank</span>
+                            <span class="errormsg pattern">Wrong format, numbers only</span>
+                        </div>
+                        <div class="card-cvc-container">
+                            <label for="cvc">CVC</label> <br/>
+                            <input type="text" id="cvc" name="cvc" placeholder="e.g. 123">
+                            <span class="errormsg blank">Can't be blank</span>
+                            <span class="errormsg pattern">Wrong format, numbers only</span>
+                        </div>
+                    </li>
+                    <li>
+                        <button id="submit-button" class="button" type="button">Confirm</button>
+                    </li>
+                </ul>
+            </form>
+        </div>
+        <!-- Form complete -->
+        <div id="form-complete" class="hide">
+            <div class="icon-complete">
+                <img src="./assets/images/icon-complete.svg" alt="Blue circle with a check symbol in the middle"/>
+            </div>
+            <h1>THANK YOU!</h1>
+            <p>We've added your card details</p>
+            <button id="form-complete-button" class="button">Continue</button>
+        </div>
+    </main>
+
+
+
+
+
+
+
+  
+    <!-- <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="https://github.com/nicolas055" target="_blank">Nicolas Leite</a>.
+    </div> -->
+
+
+    <script src="./assets/javascript/script.js"></script>
+</body>
+</html>
