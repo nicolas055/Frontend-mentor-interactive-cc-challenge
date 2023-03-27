@@ -61,6 +61,7 @@ main {
     width: 447px;
     height: 245px;
     padding: 25px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, .2);
 }
 #card-front .card-number {
     font-size: 30px;
@@ -137,6 +138,12 @@ main {
     line-height: 16px;
 } */
 
+
+.input-border-wrapper.background-gradient {
+    background-image: var(--linear-gradient);
+    border-radius: 8px;
+}
+
 #form-container form ul li input {
     width: 100%;
     height: 45px;
@@ -145,6 +152,8 @@ main {
     font-size: 16px;
     padding: 10px 15px;
     line-height: 16px;
+    background-clip: padding-box;
+    outline: 0;
 }
 
 #form-container form ul li input::placeholder {
@@ -154,11 +163,12 @@ main {
     display: flex;
     justify-content: space-between;
 }
+#form-container form ul li.expDate-and-cvc .card-date-container .input-border-wrapper {
+    display: inline-block;
+    width: 48%;
+}
 #form-container form ul li.expDate-and-cvc .card-date-container {
     width: 40%;
-}
-#form-container form ul li.expDate-and-cvc .card-date-container input {
-    width: 48%;
 }
 #form-container form ul li.expDate-and-cvc .card-cvc-container {
     width: 50%;
@@ -278,5 +288,10 @@ main {
     }
     #form-container form ul li input {
         font-size: 17px;
+    }
+
+    /* Form complete */
+    #form-complete .button {
+        width: 100%;
     }
 }

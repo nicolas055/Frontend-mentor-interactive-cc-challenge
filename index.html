@@ -43,26 +43,36 @@
                 <ul>
                     <li>
                         <label class="card-name-label" for="card-name">CARDHOLDER NAME</label> <br/>
-                        <input type="text" id="card-name" name="card-name" placeholder="e.g. Jane Appleseed">
+                        <div class="input-border-wrapper">
+                            <input type="text" id="card-name" name="card-name" placeholder="e.g. Jane Appleseed">
+                        </div>
                         <span class="errormsg blank">Can't be blank</span>
                     </li>
                     <li>
                         <label for="card-number">CARD NUMBER</label> <br/>
-                        <input title="Digite apenas números" type="text" id="card-number" name="card-number" placeholder="e.g. 1234 5678 9123 0000">
+                        <div class="input-border-wrapper">
+                            <input title="Digite apenas números" type="text" id="card-number" name="card-number" placeholder="e.g. 1234 5678 9123 0000">
+                        </div>
                         <span class="errormsg blank">Can't be blank</span>
                         <span class="errormsg pattern">Wrong format, numbers only</span>
                     </li>
                     <li class="expDate-and-cvc">
                         <div class="card-date-container">
                             <label for="card-date-month">EXP. DATE (MM/YY)</label> <br/>
-                            <input type="text" id="card-date-month" name="card-date-month" placeholder="MM">
-                            <input type="text" id="card-date-year" name="card-date-year" placeholder="YY"><br/>
+                            <div class="input-border-wrapper">
+                                <input type="text" id="card-date-month" name="card-date-month" placeholder="MM">
+                            </div>
+                            <div class="input-border-wrapper">
+                                <input type="text" id="card-date-year" name="card-date-year" placeholder="YY"><br/>
+                            </div>
                             <span class="errormsg blank">Can't be blank</span>
                             <span class="errormsg pattern">Wrong format, numbers only</span>
                         </div>
                         <div class="card-cvc-container">
                             <label for="cvc">CVC</label> <br/>
-                            <input type="text" id="cvc" name="cvc" placeholder="e.g. 123">
+                            <div class="input-border-wrapper">
+                                <input type="text" id="cvc" name="cvc" placeholder="e.g. 123">
+                            </div>
                             <span class="errormsg blank">Can't be blank</span>
                             <span class="errormsg pattern">Wrong format, numbers only</span>
                         </div>

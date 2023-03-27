@@ -19,8 +19,11 @@ const formDateMonth = document.getElementById('card-date-month');
 const formDateYear = document.getElementById('card-date-year');
 const formCvc = document.getElementById('cvc');
 const formButton = document.getElementById('submit-button');
+const formInput = document.querySelectorAll('#form-container form ul li input');
+const formInputWrapper = document.querySelectorAll('.input-border-wrapper');
 //Form Complete
 const formCompleteButton = document.getElementById('form-complete-button');
+console.log(formInputWrapper)
 
 
 
@@ -74,6 +77,54 @@ formCvc.addEventListener('keyup', () => {
         cardCvc.innerText = '000';
     }
 })
+/* Change input border on focus */
+document.addEventListener('click', (e) => {
+    // Input 0
+    if(formInput[0].contains(e.target)) {
+        formInputWrapper[0].classList.add('background-gradient');
+        formInput[0].style.border = '1px solid transparent';
+    } else {
+        formInputWrapper[0].classList.remove('background-gradient');
+        formInput[0].style.border = '1px solid rgba(0, 0, 0, .5)';
+    }
+    
+    // Input 1
+    if(formInput[1].contains(e.target)) {
+        formInputWrapper[1].classList.add('background-gradient');
+        formInput[1].style.border = '1px solid transparent';
+    } else {
+        formInputWrapper[1].classList.remove('background-gradient');
+        formInput[1].style.border = '1px solid rgba(0, 0, 0, .5)';
+    }
+
+    // Input 2
+    if(formInput[2].contains(e.target)) {
+        formInputWrapper[2].classList.add('background-gradient');
+        formInput[2].style.border = '1px solid transparent';
+    } else {
+        formInputWrapper[2].classList.remove('background-gradient');
+        formInput[2].style.border = '1px solid rgba(0, 0, 0, .5)';
+    }
+    
+    // Input 3
+    if(formInput[3].contains(e.target)) {
+        formInputWrapper[3].classList.add('background-gradient');
+        formInput[3].style.border = '1px solid transparent';
+    } else {
+        formInputWrapper[3].classList.remove('background-gradient');
+        formInput[3].style.border = '1px solid rgba(0, 0, 0, .5)';
+    }
+
+    // Input 4
+    if(formInput[4].contains(e.target)) {
+        formInputWrapper[4].classList.add('background-gradient');
+        formInput[4].style.border = '1px solid transparent';
+    } else {
+        formInputWrapper[4].classList.remove('background-gradient');
+        formInput[4].style.border = '1px solid rgba(0, 0, 0, .5)';
+    }
+});
+
 
 /* Validating form */
 let formValidationName = false;
@@ -142,3 +193,6 @@ formButton.addEventListener('click', () => {
 })
 
 formCompleteButton.addEventListener('click', () => location.reload(true));
+
+
+
