@@ -225,7 +225,7 @@ main {
 
 
 /* Mobile */
-@media (max-width: 375px) {
+@media (max-width: 475px) {
     body {
         background-image: url('../images/bg-main-mobile.png');
     }
