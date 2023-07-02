@@ -232,7 +232,8 @@ main {
         padding: 0px 25px;
     }
     #cards-container {
-        min-height: 300px;
+        max-height: 300px;
+        flex: none;
     }
     /* Cards */
     #card-back, 
@@ -273,6 +274,9 @@ main {
     }
 
     /* Form */
+    #form-container {
+        flex: none;
+    }
     #form-container form ul {
         justify-content: space-around;
     }
