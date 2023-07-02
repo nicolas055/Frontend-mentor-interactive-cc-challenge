@@ -259,7 +259,10 @@ body.dark-mode {
     color: var(--form-complete-dark-p-color);
 }
 .dark-mode-transition {
-    transition: 0.5s;
+    /* transition: background-color 0.5s, color 0.5s, border 0.5s, transform 0.5s, box-shadow 0.5s; */
+    transition-property: background-color, color, border, transform, box-shadow;
+    transition-duration: 0.5s;
+    
 }
 
 /* Dark Mode Switch */
@@ -275,6 +278,7 @@ body.dark-mode {
     height: 30px;
     padding: 0 10px;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 #dark-mode-toggle.dark-mode {
     background-color: var(--Very-dark-violet);
@@ -293,13 +297,6 @@ body.dark-mode {
     background-color: transparent;
     border-radius: 50%;
     box-shadow: inset -6px 0 0 0px var(--white);
-} 
-
-#dark-mode-toggle #sun.show {
-    display: block;
-}
-#dark-mode-toggle #moon.show {
-    display: block;
 }
 
 
@@ -374,7 +371,7 @@ body.dark-mode {
     #form-complete .button {
         width: 100%;
     }
-    
+
     /* Dark Mode Switch */
     #dark-mode-toggle {
         top: 285px;
