@@ -23,7 +23,16 @@ const formInput = document.querySelectorAll('#form-container form ul li input');
 const formInputWrapper = document.querySelectorAll('.input-border-wrapper');
 //Form Complete
 const formCompleteButton = document.getElementById('form-complete-button');
-console.log(formInputWrapper)
+console.log(formInputWrapper);
+// Dark Mode
+const body = document.querySelector('body');
+const formContainerForm = document.querySelector('#form-container form');
+const buttons = document.querySelectorAll('.button');
+const formCompleteH1 = document.querySelector('#form-complete h1');
+const formCompleteP = document.querySelector('#form-complete p');
+const darkModeToggle = document.getElementById('dark-mode-toggle');
+const darkModeToggleSun = document.querySelector('#dark-mode-toggle #sun')
+const darkModeToggleMoon = document.querySelector('#dark-mode-toggle #moon')
 
 
 
@@ -82,46 +91,56 @@ document.addEventListener('click', (e) => {
     // Input 0
     if(formInput[0].contains(e.target)) {
         formInputWrapper[0].classList.add('background-gradient');
-        formInput[0].style.border = '1px solid transparent';
+        formInput[0].classList.add('border-transparent');
+        formInput[0].classList.remove('border');
     } else {
         formInputWrapper[0].classList.remove('background-gradient');
-        formInput[0].style.border = '1px solid rgba(0, 0, 0, .5)';
+        formInput[0].classList.remove('border-transparent');
+        formInput[0].classList.add('border');
     }
     
     // Input 1
     if(formInput[1].contains(e.target)) {
         formInputWrapper[1].classList.add('background-gradient');
-        formInput[1].style.border = '1px solid transparent';
+        formInput[1].classList.add('border-transparent');
+        formInput[1].classList.remove('border');
     } else {
         formInputWrapper[1].classList.remove('background-gradient');
-        formInput[1].style.border = '1px solid rgba(0, 0, 0, .5)';
+        formInput[1].classList.remove('border-transparent');
+        formInput[1].classList.add('border');
     }
 
     // Input 2
     if(formInput[2].contains(e.target)) {
         formInputWrapper[2].classList.add('background-gradient');
-        formInput[2].style.border = '1px solid transparent';
+        formInput[2].classList.add('border-transparent');
+        formInput[2].classList.remove('border');
     } else {
         formInputWrapper[2].classList.remove('background-gradient');
-        formInput[2].style.border = '1px solid rgba(0, 0, 0, .5)';
+        formInput[2].classList.remove('border-transparent');
+        formInput[2].classList.add('border');
     }
     
     // Input 3
     if(formInput[3].contains(e.target)) {
         formInputWrapper[3].classList.add('background-gradient');
-        formInput[3].style.border = '1px solid transparent';
+        formInput[3].classList.add('border-transparent');
+        formInput[3].classList.remove('border');
     } else {
         formInputWrapper[3].classList.remove('background-gradient');
-        formInput[3].style.border = '1px solid rgba(0, 0, 0, .5)';
+        formInput[3].classList.remove('border-transparent');
+        formInput[3].classList.add('border');
     }
 
     // Input 4
     if(formInput[4].contains(e.target)) {
         formInputWrapper[4].classList.add('background-gradient');
-        formInput[4].style.border = '1px solid transparent';
+        formInput[4].classList.add('border-transparent');
+        formInput[4].classList.remove('border');
     } else {
         formInputWrapper[4].classList.remove('background-gradient');
-        formInput[4].style.border = '1px solid rgba(0, 0, 0, .5)';
+        formInput[4].classList.remove('border-transparent');
+        formInput[4].classList.add('border');
     }
 });
 
@@ -193,6 +212,23 @@ formButton.addEventListener('click', () => {
 })
 
 formCompleteButton.addEventListener('click', () => location.reload(true));
+
+// Dark Mode
+darkModeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    formContainerForm.classList.toggle('dark-mode');
+    formInput[0].classList.toggle('dark-mode');
+    formInput[1].classList.toggle('dark-mode');
+    formInput[2].classList.toggle('dark-mode');
+    formInput[3].classList.toggle('dark-mode');
+    formInput[4].classList.toggle('dark-mode');
+    buttons[0].classList.toggle('dark-mode');
+    formCompleteH1.classList.toggle('dark-mode');
+    formCompleteP.classList.toggle('dark-mode');
+    buttons[1].classList.toggle('dark-mode');
+    darkModeToggle.classList.toggle('dark-mode');
+    darkModeToggleSun.classList.toggle('moon');
+})
 
 
 

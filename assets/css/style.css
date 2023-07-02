@@ -26,6 +26,7 @@
     --input-dark-border-color: rgba(160, 174, 255, .2);
     --form-dark-label-color: #a0aeff;
     --button-dark-background-color: #0f1c81;
+    --form-complete-dark-p-color: #ccc;
 }
 
 body {
@@ -34,6 +35,7 @@ body {
     background-image: url('../images/bg-main-desktop.png');
     background-repeat: no-repeat;
     height: 100vh;
+    
 }
 main {
     display: flex;
@@ -155,6 +157,13 @@ main {
     background-clip: padding-box;
     outline: 0;
 }
+#form-container form ul li input.border-transparent {
+    border: 1px solid transparent;
+}
+#form-container form ul li input.border {
+    border: 1px solid rgba(0, 0, 0, .5);
+}
+
 
 #form-container form ul li input::placeholder {
     opacity: 0.35;
@@ -243,6 +252,55 @@ body.dark-mode {
 .button.dark-mode {
     background-color: var(--button-dark-background-color);
 }
+#form-complete h1.dark-mode {
+    color: var(--white);
+}
+#form-complete p.dark-mode {
+    color: var(--form-complete-dark-p-color);
+}
+.dark-mode-transition {
+    transition: 0.5s;
+}
+
+/* Dark Mode Switch */
+#dark-mode-toggle {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    background-color: var(--button-dark-background-color);
+    border-radius: 20px;
+    width: 60px;
+    height: 30px;
+    padding: 0 10px;
+    cursor: pointer;
+}
+#dark-mode-toggle.dark-mode {
+    background-color: var(--Very-dark-violet);
+}
+
+#dark-mode-toggle #sun {
+    width: 20px;
+    height: 20px;
+    background-color: var(--white);
+    border-radius: 50%;
+}
+ #dark-mode-toggle #sun.moon {
+    transform: translateX(20px);
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: inset -6px 0 0 0px var(--white);
+} 
+
+#dark-mode-toggle #sun.show {
+    display: block;
+}
+#dark-mode-toggle #moon.show {
+    display: block;
+}
 
 
 
@@ -315,5 +373,11 @@ body.dark-mode {
     /* Form complete */
     #form-complete .button {
         width: 100%;
+    }
+    
+    /* Dark Mode Switch */
+    #dark-mode-toggle {
+        top: 285px;
+        right: 25px;
     }
 }
