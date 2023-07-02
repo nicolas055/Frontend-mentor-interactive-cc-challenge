@@ -103,6 +103,8 @@ main {
 #form-container form {
     width: 385px;
     height: 350px;
+    font-weight: 700;
+    color: var(--Very-dark-violet);
     display: flex;
     align-items: center;
 } 
@@ -150,18 +152,13 @@ main {
     opacity: 0.35;
 }
 #form-container form ul li:nth-child(3) {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto 50%;
+    gap: 3%;
 }
 #form-container form ul li.expDate-and-cvc .card-date-container .input-border-wrapper {
     display: inline-block;
     width: 48%;
-}
-#form-container form ul li.expDate-and-cvc .card-date-container {
-    width: 40%;
-}
-#form-container form ul li.expDate-and-cvc .card-cvc-container {
-    width: 50%;
 }
 .button {
     background-color: var(--Very-dark-violet);
@@ -225,14 +222,17 @@ main {
 
 
 /* Mobile */
-@media (max-width: 475px) {
+@media (max-width: 450px) {
     body {
-        background-image: url('../images/bg-main-mobile.png');
+        background-image: url('../images/bg-main-mobile-edited.png');
+        background-position: top center;
     }
     main {
         flex-direction: column;
         padding: 0px 25px;
-        height: 97vh;
+    }
+    #cards-container {
+        min-height: 300px;
     }
     /* Cards */
     #card-back, 
@@ -273,6 +273,9 @@ main {
     }
 
     /* Form */
+    #form-container form ul {
+        justify-content: space-around;
+    }
     #form-container form ul li label {
         font-size: 11px;
     }
