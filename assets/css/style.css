@@ -20,6 +20,12 @@
     --Light-grayish-violet: hsl(270, 3%, 87%);
     --Dark-grayish-violet: hsl(279, 6%, 55%);
     --Very-dark-violet: hsl(278, 68%, 11%);
+    /* Dark Mode */
+    --body-dark-background-color: #222222;
+    --input-dark-background-color: #2d2d2d;
+    --input-dark-border-color: rgba(160, 174, 255, .2);
+    --form-dark-label-color: #a0aeff;
+    --button-dark-background-color: #0f1c81;
 }
 
 body {
@@ -222,7 +228,25 @@ main {
     text-align: center;
 }
 
+/* Dark Mode */
+body.dark-mode {
+    background-color: var(--body-dark-background-color);
+}
+#form-container form.dark-mode {
+    color: var(--form-dark-label-color);
+}
+#form-container form ul li input.dark-mode {
+    border: 1px solid var(--input-dark-border-color);
+    background-color: var(--input-dark-background-color);
+    color: var(--white);
+}
+.button.dark-mode {
+    background-color: var(--button-dark-background-color);
+}
 
+
+
+/* Responsiviness */
 /* Mobile */
 @media (max-width: 450px) {
     body {
